@@ -30,6 +30,7 @@
             settingsButton = new Button();
             hookButton = new Button();
             exitButton = new Button();
+            ac2Button= new Button();
             serverListView = new DataGridView();
             Server = new DataGridViewTextBoxColumn();
             tableLayout.SuspendLayout();
@@ -46,6 +47,17 @@
             addServerButton.Text = "Add...";
             addServerButton.UseVisualStyleBackColor = true;
             addServerButton.Click += AddServerButton_Click;
+            // 
+            // ac2Button
+            // 
+            ac2Button.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ac2Button.Location = new Point(486, 200);   
+            ac2Button.Name = "ac2Button";
+            ac2Button.Size = new Size(75, 23);
+            ac2Button.TabIndex = 7;     
+            ac2Button.Text = "Open AC2";
+            ac2Button.UseVisualStyleBackColor = true;
+            ac2Button.Click += Ac2Button_Click;
             // 
             // removeServerButton
             // 
@@ -66,8 +78,9 @@
             tableLayout.Controls.Add(addServerButton, 1, 0);
             tableLayout.Controls.Add(removeServerButton, 1, 1);
             tableLayout.Controls.Add(hookButton, 1, 2);
-            tableLayout.Controls.Add(settingsButton, 1, 3);
-            tableLayout.Controls.Add(exitButton, 1, 4);
+            tableLayout.Controls.Add(ac2Button, 1, 3);
+            tableLayout.Controls.Add(settingsButton, 1, 4);
+            tableLayout.Controls.Add(exitButton, 1, 5);
             tableLayout.Controls.Add(serverListView, 0, 0);
             tableLayout.Dock = DockStyle.Fill;
             tableLayout.Location = new Point(0, 0);
@@ -76,6 +89,7 @@
             tableLayout.RowStyles.Add(new RowStyle());
             tableLayout.RowStyles.Add(new RowStyle());
             tableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayout.RowStyles.Add(new RowStyle());
             tableLayout.RowStyles.Add(new RowStyle());
             tableLayout.RowStyles.Add(new RowStyle());
             tableLayout.Size = new Size(564, 287);
@@ -139,7 +153,7 @@
             serverListView.Name = "serverListView";
             serverListView.ReadOnly = true;
             serverListView.RowHeadersVisible = false;
-            tableLayout.SetRowSpan(serverListView,5);
+            tableLayout.SetRowSpan(serverListView,6);
             serverListView.RowTemplate.Height = 40;
             serverListView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             serverListView.Size = new Size(477, 281);
@@ -174,6 +188,7 @@
         #endregion
         private Button addServerButton;
         private Button removeServerButton;
+        private Button ac2Button;
         private TableLayoutPanel tableLayout;
         private Button settingsButton;
         private Button hookButton;
