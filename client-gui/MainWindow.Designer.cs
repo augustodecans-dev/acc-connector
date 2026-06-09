@@ -170,12 +170,14 @@
             // 
             // MainWindow
             // 
+            
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(564, 287);
             Controls.Add(tableLayout);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
+            this.Icon = new System.Drawing.Icon("ACC_Connector.ico");
             Name = "MainWindow";
             Text = "ACC Connector";
             StartPosition = FormStartPosition.CenterScreen;
